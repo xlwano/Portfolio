@@ -1,0 +1,141 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #030712;
+    display: flex;
+}
+
+.mini-title {
+    font-family: 'Arial', sans-serif;
+    font-size: 20px;
+    color: #03CCE1;
+}
+
+.big-title {
+    color: white;
+    font-family: 'Arial', sans-serif;
+}
+
+
+.big-title2 {
+    background: linear-gradient(90deg, #03CCE1, #A06DCF);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-family: 'Arial', sans-serif;
+    margin-left: -25px;
+}
+
+.title {
+    display: flex;
+    flex-direction: row;
+    font-size: 120px;
+    margin-left: 200px;
+margin-top: 200px;
+}
+
+.title2 {
+    margin-left: 75px;
+}
+
+.mini-border {
+    border: solid 1px #118F9B;
+    border-radius: 20px;
+    padding: 5px 10px;
+    margin-bottom: -175px;
+    width: fit-content;
+    margin-left: 200px;
+    margin-top: 175px;
+}
+
+.title-bio {
+    display: flex;
+    color: #78808D;
+    font-family: 'Arial', sans-serif;
+    margin-left: 200px;
+    font-size: 20px;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.lower {
+    font-family: 'Arial', sans-serif;
+    margin-top: -20px;
+    font-size: 10px;
+}
+
+.purple {
+    color: #A06DCF;
+}
+
+.blue {
+    color: #03CCE1;
+}
+
+.project-button {
+    display: flex;
+    background: linear-gradient(90deg, #03CCE1, #A06DCF);
+    border: none;
+    border-radius: 50px;
+    color: white;
+    padding: 10px 20px;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 200px;
+    margin-top: 30px;
+    height: 40px;
+    width: 120px;
+    text-align: center;
+}
+
+.project-button span {
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.github-logo {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+}
+
+.title-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.github-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: #363a40 solid 1px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-top: 35px;
+}
+
+.mail-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: #363a40 solid 1px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-top: 35px;
+}
+
+.mail-logo {
+    width: 30px;
+    height: 25px;
+    vertical-align: middle;
+}
