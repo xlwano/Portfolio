@@ -147,3 +147,18 @@ margin-top: 200px;
 .gradient {
     color: linear-gradient(90deg, #03CCE1, #A06DCF);
 }
+
+.about-me {
+    display: flex;
+    flex-direction: column;
+    margin-left: 200px;
+    margin-top: 50px;
+    font-family: 'Arial', sans-serif;
+    color: #78808D;
+    width: 600px;
+    line-height: 1.5;
+}
+
+.blue {
+    color: #03CCE1;
+}
