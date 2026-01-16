@@ -144,11 +144,6 @@ margin-top: 200px;
     vertical-align: middle;
 }
 
-.gradient {
-        background: linear-gradient(90deg, #03CCE1, #A06DCF);
-    -webkit-background-clip: text;
-}
-
 .about-me {
     display: flex;
     flex-direction: column;
