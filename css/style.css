@@ -1,41 +1,86 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #030712;
+    background: linear-gradient(135deg, #030712 0%, #0a0f1f 100%);
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+    min-height: 100vh;
 }
 
 img {
     user-select: none;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    color:white;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    align-items: center;
+    margin-top: 80px;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
 .mini-title {
+    display: flex;
+    justify-content: center;
     font-family: 'Arial', sans-serif;
     font-size: 20px;
     color: #03CCE1;
+    letter-spacing: 2px;
+    font-weight: 600;
 }
 
 .big-title {
     color: white;
     font-family: 'Arial', sans-serif;
+    font-weight: 900;
+    letter-spacing: -2px;
 }
 
 
 .big-title2 {
-    background: linear-gradient(90deg, #03CCE1, #A06DCF);
+    background: linear-gradient(90deg, #03CCE1 0%, #03CCE1 16.67%, #1E6FB7 33.33%, #5A5AA0 50%, #8856A8 66.67%, #A06DCF 83.33%, #A06DCF 100%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
     font-family: 'Arial', sans-serif;
     margin-left: -25px;
+    font-weight: 900;
+    letter-spacing: -2px;
 }
 
 .title {
     display: flex;
     flex-direction: row;
-    font-size: 120px;
-    margin-left: 200px;
-margin-top: 200px;
+    font-size: clamp(60px, 15vw, 120px);
+    justify-content: center;
+    margin-top: 0;
+    margin-bottom: 20px;
 }
 
 .title2 {
@@ -45,21 +90,30 @@ margin-top: 200px;
 .mini-border {
     border: solid 1px #118F9B;
     border-radius: 20px;
-    padding: 5px 10px;
-    margin-bottom: -175px;
+    padding: 8px 16px;
     width: fit-content;
-    margin-left: 200px;
-    margin-top: 175px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    align-self: center;
+    background-color: rgba(3, 204, 225, 0.05);
+    transition: all 0.3s ease;
+}
+
+.mini-border:hover {
+    border-color: #03CCE1;
+    background-color: rgba(3, 204, 225, 0.1);
 }
 
 .title-bio {
     display: flex;
-    color: #78808D;
+    color: #9ca3af;
     font-family: 'Arial', sans-serif;
-    margin-left: 200px;
-    font-size: 20px;
+    font-size: clamp(16px, 5vw, 20px);
     flex-direction: row;
     gap: 5px;
+    justify-content: center;
+    font-weight: 500;
+    line-height: 1.6;
 }
 
 .lower {
@@ -78,24 +132,31 @@ margin-top: 200px;
 
 .project-button {
     display: flex;
+    align-items: center;
+    justify-content: center;
     background: linear-gradient(90deg, #03CCE1, #A06DCF);
     border: none;
     border-radius: 50px;
     color: white;
-    padding: 10px 20px;
+    padding: 12px 30px;
     font-family: 'Arial', sans-serif;
     font-size: 16px;
+    font-weight: 600;
     cursor: pointer;
-    margin-left: 200px;
-    margin-top: 30px;
-    height: 40px;
-    width: 120px;
+    height: auto;
+    width: auto;
     text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(3, 204, 225, 0.3);
+}
+
+.project-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(3, 204, 225, 0.5);
 }
 
 .project-button span {
-    margin-left: 10px;
-    margin-top: 10px;
+    margin: 0;
 }
 
 .github-logo {
@@ -107,35 +168,50 @@ margin-top: 200px;
 .title-buttons {
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    gap: 25px;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 60px;
 }
 
 .github-button {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: none;
+    background: rgba(3, 204, 225, 0.05);
     border: #363a40 solid 1px;
     border-radius: 50%;
     width: 50px;
     height: 50px;
     cursor: pointer;
-    margin-left: 10px;
-    margin-top: 35px;
+    transition: all 0.3s ease;
+}
+
+.github-button:hover {
+    border-color: #03CCE1;
+    background: rgba(3, 204, 225, 0.15);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(3, 204, 225, 0.3);
 }
 
 .mail-button {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: none;
+    background: rgba(3, 204, 225, 0.05);
     border: #363a40 solid 1px;
     border-radius: 50%;
     width: 50px;
     height: 50px;
     cursor: pointer;
-    margin-left: 10px;
-    margin-top: 35px;
+    transition: all 0.3s ease;
+}
+
+.mail-button:hover {
+    border-color: #03CCE1;
+    background: rgba(3, 204, 225, 0.15);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(3, 204, 225, 0.3);
 }
 
 .mail-logo {
@@ -147,14 +223,188 @@ margin-top: 200px;
 .about-me {
     display: flex;
     flex-direction: column;
-    margin-left: 200px;
     margin-top: 50px;
     font-family: 'Arial', sans-serif;
     color: #FFFFFF;
-    width: 600px;
+    width: 100%;
+    max-width: 600px;
     line-height: 1.5;
 }
 
 .blue {
     color: #03CCE1;
+}
+
+.header-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 12px 30px;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    width: fit-content;
+    border-radius: 50px;
+    margin-top: 20px;
+    border: 1px solid rgba(3, 204, 225, 0.2);
+    transition: all 0.3s ease;
+}
+
+.header-bar:hover {
+    border-color: rgba(3, 204, 225, 0.5);
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.header-item {
+    color: white;
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.header-item:hover {
+    color: #03CCE1;
+}
+
+.header-item::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #03CCE1, #A06DCF);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.header-item:hover::after {
+    transform: scaleX(1);
+}
+
+
+@media (max-width: 768px) {
+    .title {
+        font-size: clamp(40px, 12vw, 80px);
+        margin-top: 30px;
+    }
+
+    .mini-border {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .title-bio {
+        font-size: 16px;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
+
+    .project-button {
+        margin-top: 20px;
+    }
+
+    .title-buttons {
+        margin-top: 20px;
+        flex-wrap: wrap;
+    }
+
+    .github-button,
+    .mail-button {
+        margin-left: 0;
+    }
+
+    .header-item {
+        font-size: 14px;
+    }
+
+    .header-bar {
+        gap: 15px;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: clamp(30px, 10vw, 60px);
+        margin-top: 20px;
+    }
+
+    .mini-title {
+        font-size: 16px;
+    }
+
+    .title-bio {
+        font-size: 14px;
+    }
+
+    .project-button {
+        width: 100px;
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    .header-item {
+        font-size: 12px;
+    }
+
+    .header-bar {
+        gap: 10px;
+        padding: 10px;
+    }
+}
+
+
+.page-title {
+    text-align: center;
+    margin-bottom: 60px;
+    margin-top: 40px;
+}
+
+.page-title h1 {
+    font-size: clamp(40px, 10vw, 60px);
+    color: white;
+    margin: 0;
+    background: linear-gradient(90deg, #03CCE1, #A06DCF);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    width: 100%;
+    max-width: 700px;
+}
+
+.about-section {
+    background: rgba(3, 204, 225, 0.05);
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid rgba(3, 204, 225, 0.2);
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.about-section:hover {
+    border-color: rgba(3, 204, 225, 0.5);
+    background: rgba(3, 204, 225, 0.08);
+}
+
+.about-section h2 {
+    color: #03CCE1;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.about-section p {
+    color: #9ca3af;
+    line-height: 1.8;
+    font-size: 16px;
+    margin: 0;
 }
